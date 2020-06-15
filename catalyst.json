@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "targets": [
+      "todolist",
+      "test_functions",
+      "doubletick"
+    ],
+    "ignore": [],
+    "source": "functions"
+  },
+  "client": {
+    "source": "client"
+  }
+}

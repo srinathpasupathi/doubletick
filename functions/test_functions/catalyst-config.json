@@ -1,0 +1,10 @@
+{
+	"deployment": {
+		"name": "test_functions",
+		"stack": "node10",
+		"type": "basicio"
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Todo List</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="/app/main.js"></script>
+        <link href="/app/main.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="/app/favicon.ico">
+    </head>
+    <body>
+        <div align="center" style="padding: 40px;margin: 0 auto;position: relative;">
+            <img src="/app/logo.png" height="10%" width="15%"></img>
+        </div>
+<div id="todo-table">
+    <form action= "/server/doubletick/todo" method="POST">
+        <input type="text" id = "itemVal" name="item" placeholder="Add new item .." required/>
+        <input type="submit" value="Add Item">
+    </form>
+    <ul id="noteList">
+        <% for(var i=0; i < todos.length; i++){ %>
+            <li value="<%= todos[i].item[0].id %>"><%=todos[i].item[1].name %></li>
+        <% } %>
+    </ul>
+</div>
+<div>
+    <p id="para"></p>
+</div>
+<script src="https://js.zohostatic.com/catalystclient/0.0.1/catalystWebSDK.js"></script>
+<script>
+	let cred = new catalystCredential();
+	cred.loadFromJSON({
+	    project_Id: 2628000000052001,
+	    zaid: 10018565078
+	                 });
+    catalyst.initApp(cred, {});
+    var notification = catalyst.notification;
+    notification.enableNotification().then((response) => {
+    //Create a handler for the message when received
+    catalyst.notification.messageHandler = (msg) => {
+        console.log(msg);
+        document.getElementById('para').innerHTML="NOTIFICATION RECEIVED";
+    }
+});
+</script>
+</body>
+</html>

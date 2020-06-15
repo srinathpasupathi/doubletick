@@ -1,0 +1,9 @@
+{
+	"name": "todolist",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "srinath.p@zohocorp.com",
+	"dependencies": {
+		"zcatalyst-sdk-node": "latest"
+	}
+}

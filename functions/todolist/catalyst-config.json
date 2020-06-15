@@ -1,0 +1,10 @@
+{
+	"deployment": {
+		"name": "todolist",
+		"stack": "node10",
+		"type": "basicio"
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

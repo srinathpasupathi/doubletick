@@ -1,0 +1,11 @@
+<div id="todo-table">
+    <form action= "/server/doubletick/todo" method="POST">
+        <input type="text" name="item" placeholder="Add new item .." required/>
+        <input type="submit" value="Add Item"></button>
+    </form>
+    <ul id="noteList">
+        <% for(var i=0; i < todos.length; i++){ %>
+            <li><%=todos[i].item %></li>
+        <% } %>
+    </ul>
+</div>

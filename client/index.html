@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Double Tick</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="login.css" />
+    <script src="https://js.zohostatic.com/catalystclient/0.0.1/catalystWebSDK.js"></script>
+<script>
+	var cred = new catalystCredential();
+	cred.loadFromJSON({
+	    project_Id: 2628000000052001,
+	    zaid: 10018565078
+                });
+	catalyst.initApp(cred, {});
+	catalyst.auth.signIn("loginPage");
+</script>
+</head>
+<body>
+    <div id="loginPage" class="full-height"></div>
+</body>
+</html>
