@@ -5,6 +5,6 @@
   "deployment": {
     "name": "doubletick",
     "stack": "node10",
-    "type": "applogic"
+    "type": "advancedio"
   }
 }
